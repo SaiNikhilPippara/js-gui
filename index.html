@@ -22,11 +22,11 @@
       <input id="guest" type="text" value=" ">
     </p>
 
-    <p>Enter first number:
-      <input id="Courses" type="number" value="Courses">
+    <p>Enter the number of courses:
+      <input id="Courses" type="number" value="courses">
     </p>
 
-    <p>Enter second number:
+    <p>Enter Average Students:
       <input id="avgstudents" type="number" value="avgstudents">
     </p>
 
@@ -54,7 +54,7 @@
       console.log('i=' + i)
       const j = parseInt(document.getElementById('avgstudents').value)
       console.log('j=' + j)
-      const ans = s + ', The number of courses is ' + multiply(i, j) + '.'
+      const ans = s + ', The number of courses is ' + multiply(i,j) + '.'
       document.getElementById('result').innerHTML = ans
     })
 
