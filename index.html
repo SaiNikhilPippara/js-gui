@@ -23,13 +23,12 @@
       <input id="guest" type="text" value="nikhil ">
     </p>
 
-    <p>Enter the number of courses:
-      <input id="Courses" type="number" value=" ">
+    <p>Enter the temperature in degrees:
+      <input id="degC" type="number" value=" ">
     </p>
+    
 
-    <p>Enter Average Students:
-      <input id="avgstudents" type="number" value=" ">
-    </p>
+    
 
     <button id="clicker" class="btn btn-primary">Click me!</button>
 
@@ -42,20 +41,21 @@
 
     console.log('Declare testable functions.....................')
 
-    function multiply(x, y) {
-      return x * y   
+    function substract(x,273.15)
+ {
+      return x - 273.15   
        }
-    console.log('Defined multiply=' + multiply)
+    console.log('Defined substraction=' +substract)
 
     console.log('Declare event listeners .......................')
 
     document.getElementById('clicker').addEventListener('click', function () {
       const s = document.getElementById('guest').value
-      const i = parseInt(document.getElementById('Courses').value)
+      const i = parseInt(document.getElementById('degC').value)
       console.log('i=' + i)
-      const j = parseInt(document.getElementById('avgstudents').value)
-      console.log('j=' + j)
-      const ans = s + ', The number of courses is ' + multiply(i,j) + '.'
+      const j = parsedouble(document.getElementById('avgstudents').value)
+      console.log('j=' + 273.15)
+      const ans = s + ', The number of courses is ' + substract(i,j) + '.'
       document.getElementById('result').innerHTML = ans
     })
 
