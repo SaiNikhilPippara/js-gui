@@ -16,19 +16,16 @@
   <main class="container-fluid">
 
     <h1>JavaScript for interactive apps!</h1>
-    <h3> Calculate number of students </h3>
-
+   
 
     <p>Enter your name:
-      <input id="guest" type="text" value="nikhil ">
+      <input id="guest" type="text" value="Eden">
     </p>
 
-    <p>Enter the temperature in degrees:
-      <input id="degC" type="number" value=" ">
+    <p>Enter Temprature in Farhanite:
+      <input id="firstNumber" type="number" value="7">
     </p>
-    
 
-    
 
     <button id="clicker" class="btn btn-primary">Click me!</button>
 
@@ -38,27 +35,20 @@
 
   <script>
     console.log('SCRIPT START')
-
     console.log('Declare testable functions.....................')
-
-    function substract(x,273.15)
- {
-      return x - 273.15   
-       }
-    console.log('Defined substraction=' +substract)
-
+    function add(x) {
+      return (x - 32 ) * (5/9)
+      
+    }
+    console.log('Defined add=' + add)
     console.log('Declare event listeners .......................')
-
     document.getElementById('clicker').addEventListener('click', function () {
       const s = document.getElementById('guest').value
-      const i = parseInt(document.getElementById('degC').value)
+      const i = parseInt(document.getElementById('firstNumber').value)
       console.log('i=' + i)
-      const j = parsedouble(document.getElementById('avgstudents').value)
-      console.log('j=' + 273.15)
-      const ans = s + ', The number of courses is ' + substract(i,j) + '.'
+      const ans = s + ', Converted Temprature is ' + add(i) + ' Celcius.'
       document.getElementById('result').innerHTML = ans
     })
-
     console.log('SCRIPT END')
   </script>
 
