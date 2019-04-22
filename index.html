@@ -16,6 +16,8 @@
   <main class="container-fluid">
 
     <h1>JavaScript for interactive apps!</h1>
+
+    <h3>Temprature Converter</h3>
    
 
     <p>Enter your name:
@@ -23,7 +25,7 @@
     </p>
 
     <p>Enter Temprature in Farhanite:
-      <input id="firstNumber" type="number" value="7">
+      <input id="temprature" type="number" value="7">
     </p>
 
 
@@ -44,7 +46,7 @@
     console.log('Declare event listeners .......................')
     document.getElementById('clicker').addEventListener('click', function () {
       const s = document.getElementById('guest').value
-      const i = parseInt(document.getElementById('firstNumber').value)
+      const i = parseInt(document.getElementById('temprature').value)
       console.log('i=' + i)
       const ans = s + ', Converted Temprature is ' + add(i) + ' Celcius.'
       document.getElementById('result').innerHTML = ans
